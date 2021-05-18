@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+}
+
+body {
+    padding: 0px 40px 0px 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1em;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'chicken beef sushi';
+    gap: 20px;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        'chicken beef'
+        'sushi sushi';
+    }
+}
+
+@media (max-width: 767px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'chicken' 'beef' 'sushi';
+    }
+}
+
+section {
+    position: relative;
+    background: #ff9900;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    padding: 60px 20px 20px 20px;
+    border: 1px solid #000;
+    text-align: left;
+}
+
+section.sushi {
+    grid-area: sushi;
+}
+
+section.beef {
+    grid-area: beef;
+}
+
+section.chicken {
+    grid-area: chicken;
+}
+
+.absolute-top-right {
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: auto;
+    left: auto;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-green {
+    background-color: green;
+}
